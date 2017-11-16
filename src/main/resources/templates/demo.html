@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/js/themes/default/easyui.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/js/themes/icon.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}">
+    <script type="text/javascript" th:src="@{/js/jquery-1.7.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/locale/easyui-lang-zh_CN.js}"></script>
+    <script type="text/javascript" th:src="@{/js/company.usermanage.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.form.js}"></script>
+</head>
+
+<body style="margin: 0px 0px 0px 0px">
+
+<table id="devicetab" title="用户管理" style="margin:0px 0px 0px 0px;">
+</table>
+
+<div id="mdlg" class="easyui-dialog" style="margin-top:10px;width: 350px; height: 250px; padding: 10px 20px;" closed="true"
+     buttons="#mdlg-buttons">
+    <form id="addfm" method="post">
+        <table>
+            <tr>
+                <td>员工编号:</td>
+                <td>
+                    <input type="text" name="num" id="num" value="" class="form_control">
+                    <input type="hidden" name="id" id="id" value="">
+                </td>
+            </tr>
+
+            <tr>
+                <td>姓名:</td>
+                <td>
+                    <input type="text" name="name" id="name" value="" class="form_control">
+                </td>
+            </tr>
+
+            <tr>
+                <td>性别:</td>
+                <td>
+                    <select id="sex" name="sex">
+                        <option value='0'>男</option>
+                        <option value='1'>女</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>学历:</td>
+                <td>
+                    <input type="text" name="edu" id="edu" value="" class="form_control">
+                </td>
+            </tr>
+
+            <tr>
+                <td>员工等级:</td>
+                <td>
+
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+<div id="mdlg-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="savemanager()" iconcls="icon-save">保存</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#mdlg').dialog('close');"
+       iconcls="icon-cancel">取消</a>
+</div>
+</body>
+</html>
